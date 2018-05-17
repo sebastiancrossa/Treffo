@@ -63,11 +63,11 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gom-KP-3XI">
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gom-KP-3XI">
                                 <rect key="frame" x="0.0" y="70" width="375" height="597"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="m7u-Fd-2qA">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="goalCell" rowHeight="77" id="m7u-Fd-2qA" customClass="GoalCell" customModule="Treffo" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="77"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m7u-Fd-2qA" id="FOh-ff-w5B">
@@ -137,6 +137,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="feZ-Gy-v2b" secondAttribute="bottom" constant="8" id="jH4-6S-ST0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="goalDescription" destination="kIS-Jo-BWF" id="VSf-T8-FFB"/>
+                                            <outlet property="goalProgress" destination="feZ-Gy-v2b" id="WWh-xp-Y3H"/>
+                                            <outlet property="goalType" destination="MbG-sY-qZk" id="Zpa-ao-SP2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
