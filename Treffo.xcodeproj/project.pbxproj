@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		986B054520AE0E5900CC179C /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986B054420AE0E5900CC179C /* GoalCell.swift */; };
 		986B824520A3E62E000589B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986B824420A3E62E000589B4 /* AppDelegate.swift */; };
 		986B824720A3E62E000589B4 /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986B824620A3E62E000589B4 /* GoalsVC.swift */; };
 		986B824A20A3E62E000589B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986B824820A3E62E000589B4 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		986B054420AE0E5900CC179C /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		986B824120A3E62E000589B4 /* Treffo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Treffo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		986B824420A3E62E000589B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		986B824620A3E62E000589B4 /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		986B825A20A3E75C000589B4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				986B054420AE0E5900CC179C /* GoalCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				986B054520AE0E5900CC179C /* GoalCell.swift in Sources */,
 				986B824720A3E62E000589B4 /* GoalsVC.swift in Sources */,
 				986B824D20A3E62E000589B4 /* Treffo.xcdatamodeld in Sources */,
 				986B824520A3E62E000589B4 /* AppDelegate.swift in Sources */,
