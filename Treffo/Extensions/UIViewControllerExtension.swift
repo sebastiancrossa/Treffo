@@ -13,7 +13,7 @@ extension UIViewController {
     func presentDetail(_ viewControllerToPresent: UIViewController) {
         let transition = CATransition()
         
-        transition.duration = 0.3 // Fairly good time for the desired animation
+        transition.duration = 0.2 // Fairly good time for the desired animation
         transition.type = kCATransitionPush
         transition.subtype = kCATransitionFromRight
         
@@ -25,7 +25,7 @@ extension UIViewController {
     func dismissDetail() {
         let transition = CATransition()
         
-        transition.duration = 0.3 // Fairly good time for the desired animation
+        transition.duration = 0.2 // Fairly good time for the desired animation
         transition.type = kCATransitionPush
         transition.subtype = kCATransitionFromLeft
         
