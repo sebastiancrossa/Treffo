@@ -32,7 +32,11 @@ class CreateGoalVC: UIViewController {
     }
     
     @IBAction func backButtonWasPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismissDetail()
     }
    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
 }
