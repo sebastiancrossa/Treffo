@@ -14,6 +14,7 @@
 		986B824D20A3E62E000589B4 /* Treffo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 986B824B20A3E62E000589B4 /* Treffo.xcdatamodeld */; };
 		986B824F20A3E630000589B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 986B824E20A3E630000589B4 /* Assets.xcassets */; };
 		986B825220A3E630000589B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 986B825020A3E630000589B4 /* LaunchScreen.storyboard */; };
+		98A10C0D20B7A1760034A661 /* GoalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A10C0C20B7A1760034A661 /* GoalType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		986B824E20A3E630000589B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		986B825120A3E630000589B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		986B825320A3E630000589B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98A10C0C20B7A1760034A661 /* GoalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +44,7 @@
 		986B823820A3E62E000589B4 = {
 			isa = PBXGroup;
 			children = (
+				98A10C0C20B7A1760034A661 /* GoalType.swift */,
 				986B824320A3E62E000589B4 /* Treffo */,
 				986B824220A3E62E000589B4 /* Products */,
 			);
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				986B054520AE0E5900CC179C /* GoalCell.swift in Sources */,
+				98A10C0D20B7A1760034A661 /* GoalType.swift in Sources */,
 				986B824720A3E62E000589B4 /* GoalsVC.swift in Sources */,
 				986B824D20A3E62E000589B4 /* Treffo.xcdatamodeld in Sources */,
 				986B824520A3E62E000589B4 /* AppDelegate.swift in Sources */,
