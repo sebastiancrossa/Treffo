@@ -19,6 +19,7 @@
 		98A10C1120B7AC6B0034A661 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A10C1020B7AC6B0034A661 /* UIViewControllerExtension.swift */; };
 		98A10C1320B7BE140034A661 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A10C1220B7BE140034A661 /* UIViewExtension.swift */; };
 		98A10C1520B7C0CA0034A661 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A10C1420B7C0CA0034A661 /* UIButtonExtension.swift */; };
+		98A10C1720B7C5D60034A661 /* FinishGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A10C1620B7C5D60034A661 /* FinishGoalVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		98A10C1020B7AC6B0034A661 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		98A10C1220B7BE140034A661 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		98A10C1420B7C0CA0034A661 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		98A10C1620B7C5D60034A661 /* FinishGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGoalVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				986B824620A3E62E000589B4 /* GoalsVC.swift */,
 				98A10C0E20B7A5870034A661 /* CreateGoalVC.swift */,
+				98A10C1620B7C5D60034A661 /* FinishGoalVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				98A10C1520B7C0CA0034A661 /* UIButtonExtension.swift in Sources */,
 				98A10C1120B7AC6B0034A661 /* UIViewControllerExtension.swift in Sources */,
 				98A10C1320B7BE140034A661 /* UIViewExtension.swift in Sources */,
+				98A10C1720B7C5D60034A661 /* FinishGoalVC.swift in Sources */,
 				986B824520A3E62E000589B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
