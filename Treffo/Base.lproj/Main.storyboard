@@ -169,10 +169,10 @@
             </objects>
             <point key="canvasLocation" x="45.600000000000001" y="33.733133433283363"/>
         </scene>
-        <!--View Controller-->
+        <!--Create GoalVC-->
         <scene sceneID="FU3-9v-4l4">
             <objects>
-                <viewController id="HbD-0C-lye" sceneMemberID="viewController">
+                <viewController id="HbD-0C-lye" customClass="CreateGoalVC" customModule="Treffo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g2d-4a-BEL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -190,6 +190,9 @@
                                         <rect key="frame" x="15" y="26.5" width="14" height="25"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" backgroundImage="back"/>
+                                        <connections>
+                                            <action selector="backButtonWasPressed:" destination="HbD-0C-lye" eventType="touchUpInside" id="Mc9-Cf-HYQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -227,6 +230,9 @@
                                                 <state key="normal" title="SHORT TERM">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="shortTermButtonWasPressed:" destination="HbD-0C-lye" eventType="touchUpInside" id="apN-FE-Hm0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDn-kZ-dKw">
                                                 <rect key="frame" x="177.5" y="0.0" width="157.5" height="50"/>
@@ -235,6 +241,9 @@
                                                 <state key="normal" title="LONG TERM">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="longTermButtonWasPressed:" destination="HbD-0C-lye" eventType="touchUpInside" id="iaH-W6-VO4"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -256,6 +265,9 @@
                                 <state key="normal" title="NEXT">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonWasPressed:" destination="HbD-0C-lye" eventType="touchUpInside" id="Gzr-Dk-fnr"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -272,6 +284,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sMW-p7-byU"/>
                     </view>
+                    <connections>
+                        <outlet property="goalTextView" destination="kIO-4p-NqO" id="1Hh-Yk-yxP"/>
+                        <outlet property="longTermButton" destination="iDn-kZ-dKw" id="wdL-iB-Bh0"/>
+                        <outlet property="nextButton" destination="boD-Rm-UUd" id="HyV-mg-FiH"/>
+                        <outlet property="shortTermButton" destination="9xG-CA-mY7" id="eJB-Vs-xaF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n4X-7n-P2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
