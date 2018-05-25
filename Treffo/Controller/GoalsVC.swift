@@ -99,7 +99,13 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
         deleteAction.backgroundColor = #colorLiteral(red: 0.9380082106, green: 0.1977288534, blue: 0.09307857261, alpha: 1)
         addAction.backgroundColor = #colorLiteral(red: 0.9385011792, green: 0.7164435983, blue: 0.3331357837, alpha: 1)
         
-        return [deleteAction, addAction]
+        let goal = goals[indexPath.row]
+        
+        if goal.goalProgress == goal.goalCompletionValue {
+            return[deleteAction]
+        } else {
+            return [deleteAction, addAction]
+        }
     }
 }
 
