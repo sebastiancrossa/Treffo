@@ -364,6 +364,7 @@
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="backButtonWasPressed:" destination="M1U-ze-jE6" eventType="touchUpInside" id="L6t-yK-Guy"/>
                                             <action selector="createGoalButtonWasPressed:" destination="M1U-ze-jE6" eventType="touchUpInside" id="H63-7q-a4S"/>
                                         </connections>
                                     </button>
