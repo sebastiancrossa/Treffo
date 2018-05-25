@@ -9,6 +9,8 @@
 import Foundation
 
 
-enum GoalType {
-    
+enum GoalType: String {
+    // Giving explicit values
+    case longTerm = "Long Term"
+    case shortTerm = "Short Term"
 }

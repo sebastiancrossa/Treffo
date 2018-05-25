@@ -44,7 +44,7 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        cell.configureCell(description: "Code 1 hour a day", type: "Long Term", goalProgressAmount: 2)
+        cell.configureCell(description: "Code 1 hour a day", type: .longTerm, goalProgressAmount: 2)
         return cell
     }
 }

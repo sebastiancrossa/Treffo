@@ -44,7 +44,6 @@
 		986B823820A3E62E000589B4 = {
 			isa = PBXGroup;
 			children = (
-				98A10C0C20B7A1760034A661 /* GoalType.swift */,
 				986B824320A3E62E000589B4 /* Treffo */,
 				986B824220A3E62E000589B4 /* Products */,
 			);
@@ -94,6 +93,7 @@
 		986B825C20A3E776000589B4 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
+				98A10C0C20B7A1760034A661 /* GoalType.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
