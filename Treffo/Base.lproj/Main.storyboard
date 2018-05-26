@@ -175,22 +175,61 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="58M-jg-F9f">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal Removed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sve-CT-1nw">
+                                        <rect key="frame" x="20" y="15" width="102.5" height="20"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLc-ge-F8E">
+                                        <rect key="frame" x="301" y="15" width="54" height="20"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                        <state key="normal" title="UNDO">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="undoGoalButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y03-Pr-U9U"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83529411764705885" green="0.33725490196078434" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="iLc-ge-F8E" secondAttribute="bottom" constant="15" id="A2U-R0-clA"/>
+                                    <constraint firstAttribute="trailing" secondItem="iLc-ge-F8E" secondAttribute="trailing" constant="20" id="ERx-qH-kcW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Klh-Lm-Dmo"/>
+                                    <constraint firstAttribute="bottom" secondItem="sve-CT-1nw" secondAttribute="bottom" constant="15" id="RhT-vg-QIg"/>
+                                    <constraint firstItem="sve-CT-1nw" firstAttribute="leading" secondItem="58M-jg-F9f" secondAttribute="leading" constant="20" id="WhS-0u-9mK"/>
+                                    <constraint firstItem="iLc-ge-F8E" firstAttribute="top" secondItem="58M-jg-F9f" secondAttribute="top" constant="15" id="aWw-g0-hUz"/>
+                                    <constraint firstItem="sve-CT-1nw" firstAttribute="top" secondItem="58M-jg-F9f" secondAttribute="top" constant="15" id="f0U-GP-3o1"/>
+                                    <constraint firstAttribute="height" constant="50" id="h2Y-Ld-Bk4"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="uSa-Sw-fil" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="1bB-78-b0g"/>
                             <constraint firstItem="Gom-KP-3XI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6f1-pa-y1f"/>
+                            <constraint firstItem="58M-jg-F9f" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="C94-Zm-99s"/>
+                            <constraint firstItem="58M-jg-F9f" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="DCS-Kg-8Z2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="58M-jg-F9f" secondAttribute="bottom" id="GSC-dy-5AL"/>
                             <constraint firstItem="uSa-Sw-fil" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="IVf-ot-Mbp"/>
+                            <constraint firstItem="58M-jg-F9f" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="J6k-3o-m2U"/>
                             <constraint firstItem="5uv-dT-1Uu" firstAttribute="top" secondItem="uSa-Sw-fil" secondAttribute="bottom" constant="75" id="Qdk-gi-3Ix"/>
                             <constraint firstItem="Gom-KP-3XI" firstAttribute="top" secondItem="uSa-Sw-fil" secondAttribute="bottom" id="dCk-0u-UXU"/>
                             <constraint firstItem="uSa-Sw-fil" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="m0v-QW-QSB"/>
                             <constraint firstItem="5uv-dT-1Uu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p6v-PF-Uih"/>
+                            <constraint firstItem="58M-jg-F9f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qfX-FA-peG"/>
                             <constraint firstItem="Gom-KP-3XI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rwn-57-okj"/>
+                            <constraint firstItem="58M-jg-F9f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uHb-eh-zah"/>
                             <constraint firstItem="Gom-KP-3XI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="x91-EC-0Rp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="goalRemoved" destination="58M-jg-F9f" id="52H-vn-dNx"/>
                         <outlet property="tableView" destination="Gom-KP-3XI" id="Zud-hC-bVe"/>
                     </connections>
                 </viewController>

@@ -15,6 +15,7 @@ let appDelegate = UIApplication.shared.delegate as? AppDelegate
 class GoalsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var goalRemoved: UIView!
     
     var goals: [Goal] = []
     
@@ -24,6 +25,8 @@ class GoalsVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.isHidden = false
+        
+        goalRemoved.alpha = 0.0
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +53,18 @@ class GoalsVC: UIViewController {
         guard let createGoalVC = storyboard?.instantiateViewController(withIdentifier: "CreateGoalVC") else { return }
         
         presentDetail(createGoalVC)
+    }
+    
+    @IBAction func undoGoalButtonWasPressed(_ sender: Any) {
+        fadeOut(uiViewToFadeOut: goalRemoved)
+        
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        managedContext.undoManager?.undo()
+        fetchCoreDataObjects()
+        tableView.reloadData()
+        
+        print("Button pressed")
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -112,6 +127,21 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
 
 extension GoalsVC {
     
+    // Animations
+    func fadeIn(uiViewToFadeIn view: UIView) {
+        UIView.animate(withDuration: 3.0) {
+            view.alpha = 1.0
+        }
+    }
+    
+    func fadeOut(uiViewToFadeOut view: UIView) {
+        UIView.animate(withDuration: 1.0, delay: 1.5, options: .curveEaseOut, animations: {
+            view.alpha = 0.0
+        }) { (true) in
+            self.goalRemoved.isHidden = true
+        }
+    }
+    
     func setProgress(atIndexPath indexPath: IndexPath) {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         
@@ -134,12 +164,15 @@ extension GoalsVC {
     // Removing data from Persistant Storage
     func removeGoal(atIndexPath indexPath: IndexPath) {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
-        
+        managedContext.undoManager = UndoManager() // Will let us undo what we deleted
         managedContext.delete(goals[indexPath.row])
         
         do {
             try managedContext.save()
             print("TREFFO | Succesfully removed goal")
+            
+            fadeIn(uiViewToFadeIn: goalRemoved)
+            fadeOut(uiViewToFadeOut: goalRemoved)
         } catch {
             debugPrint("Could not remove: \(error.localizedDescription)")
         }
@@ -157,6 +190,7 @@ extension GoalsVC {
             completion(true)
         } catch {
             debugPrint("Could not fetch: \(error.localizedDescription)")
+            completion(false)
         }
     }
     
