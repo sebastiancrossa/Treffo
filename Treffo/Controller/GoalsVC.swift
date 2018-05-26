@@ -134,7 +134,7 @@ extension GoalsVC {
     }
     
     func fadeOut(uiViewToFadeOut view: UIView) {
-        UIView.animate(withDuration: 1.0, delay: 3.0, options: [.allowUserInteraction, .curveEaseOut], animations: {
+        UIView.animate(withDuration: 1.0, delay: 1.0, options: [.allowUserInteraction, .curveEaseOut], animations: {
             view.alpha = 0.0
         }, completion: nil)
     }
