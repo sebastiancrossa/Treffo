@@ -168,7 +168,7 @@ extension GoalsVC {
             try managedContext.save()
             print("TREFFO | Succesfully removed goal")
             
-            //goalRemoved.alpha = 1.0
+            goalRemoved.alpha = 1.0
             //fadeIn(uiViewToFadeIn: goalRemoved)
             //fadeOut(uiViewToFadeOut: goalRemoved)
         } catch {
