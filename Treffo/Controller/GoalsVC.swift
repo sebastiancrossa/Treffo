@@ -56,14 +56,13 @@ class GoalsVC: UIViewController {
     }
     
     @IBAction func undoGoalButtonWasPressed(_ sender: Any) {
-        fadeOut(uiViewToFadeOut: goalRemoved)
-        
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         
         managedContext.undoManager?.undo()
         fetchCoreDataObjects()
         tableView.reloadData()
         
+        fadeOut(uiViewToFadeOut: goalRemoved)
         print("Button pressed")
     }
     
@@ -135,11 +134,9 @@ extension GoalsVC {
     }
     
     func fadeOut(uiViewToFadeOut view: UIView) {
-        UIView.animate(withDuration: 1.0, delay: 1.5, options: .curveEaseOut, animations: {
+        UIView.animate(withDuration: 1.0, delay: 3.0, options: [.allowUserInteraction, .curveEaseOut], animations: {
             view.alpha = 0.0
-        }) { (true) in
-            self.goalRemoved.isHidden = true
-        }
+        }, completion: nil)
     }
     
     func setProgress(atIndexPath indexPath: IndexPath) {
@@ -171,8 +168,9 @@ extension GoalsVC {
             try managedContext.save()
             print("TREFFO | Succesfully removed goal")
             
-            fadeIn(uiViewToFadeIn: goalRemoved)
-            fadeOut(uiViewToFadeOut: goalRemoved)
+            //goalRemoved.alpha = 1.0
+            //fadeIn(uiViewToFadeIn: goalRemoved)
+            //fadeOut(uiViewToFadeOut: goalRemoved)
         } catch {
             debugPrint("Could not remove: \(error.localizedDescription)")
         }
