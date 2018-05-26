@@ -231,6 +231,7 @@
                     <connections>
                         <outlet property="goalRemoved" destination="58M-jg-F9f" id="52H-vn-dNx"/>
                         <outlet property="tableView" destination="Gom-KP-3XI" id="Zud-hC-bVe"/>
+                        <outlet property="undoGoalButton" destination="iLc-ge-F8E" id="bRI-oa-VAq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

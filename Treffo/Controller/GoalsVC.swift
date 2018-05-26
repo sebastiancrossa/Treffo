@@ -16,6 +16,7 @@ class GoalsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var goalRemoved: UIView!
+    @IBOutlet weak var undoGoalButton: UIButton!
     
     var goals: [Goal] = []
     
